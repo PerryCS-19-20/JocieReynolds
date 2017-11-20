@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>print() and println()</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>The print() and println() are the functions that print out the text on the web page. Both of these functions require a start function(). The information that is written in these functions is what will be displayed on the resulting webpage. The println() function prints out information on a new line while the print() function continues to write the text on the same line. </em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        Hello World <!-- Program title -->
+      </div>
+
+<script class="code">
+
+function start(){
+    println("Welcome to my notebook page");
+    println("My name is Jocelyn Reynolds and I am currently a senior in high school. I enjoy spending time with friends and family");
+    print("Age:");
+    println(17)
+    print("Hobbies:");
+    println("palying guitar, reading, listening to music, and cooking")
+    print("Favorite Music Artist: ");
+    println("John Mayer")
+}
+
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    
+  </body>
+</html>
