@@ -1,0 +1,96 @@
+
+Home
+Modules
+Pages
+Discussions
+Grades
+Collaborations
+Office 365
+JSNotebook Graphics Page
+ Submit Assignment
+Due Nov 14 by 11:59pm  Points 5  Submitting a website url
+For this assignment, you will add a page to your JavaScript Notebook that draws a pretty picture.
+
+There is a template below, add it to a new file in your JSNotebook folder in NetBeans, then link to it from the JSNotebook index.html.
+
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Graphics Objects</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>What I learned today is how to add shapes into documents. I learned how to prepare the canvas and write code so that the computer will draw out the correct graphic. The two shapes that were explored in this chapter were the rectangle and the circle. For both images a variable is setup with the shapes cordinates.
+            The rectangle has the x and y points and a height and width that need to be set while the circle has a radius value instead of height and width. After setting the shape up you can set the color of the shape. Afterwards you have to add the image to the canvas and then tell the it to draw the shape. 
+        You can use math commands to make the shapes certain sizes and proportions and make the width and height the same sizes as the canvas.</em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        Hello World <!-- Program title -->
+      </div>
+
+<script class="code">
+   
+         
+
+           function start(){
+             var winter = readBoolean("Is it winter?"); 
+             if (winter){
+             canvas.prepare();
+            var rect = new Rect(0,0,canvas.getWidth(), canvas.getHeight());
+            rect.setColor("blue");
+            canvas.add(rect);
+            var rad = canvas.getHeight()/6;
+            var circle1 = new Circle(canvas.getWidth()/2,canvas.getHeight()-rad,rad);
+            circle1.setColor("white");
+            canvas.add(circle1);
+            var rad2 = 2*canvas.getHeight()/18;
+            var circle2 = new Circle (canvas.getWidth()/2, 7*canvas.getHeight()/12, rad2);
+            circle2.setColor("white");
+            canvas.add(circle2);
+            var rad3 = 4*canvas.getHeight()/54;
+            var circle3 = new Circle (canvas.getWidth()/2, 5*canvas.getHeight()/12, rad3);
+            circle3.setColor("white");
+            canvas.add(circle3);
+            canvas.draw();
+         
+          }
+          else{
+               canvas.prepare();
+            var rect = new Rect(0,0,canvas.getWidth(), canvas.getHeight());
+            rect.setColor("pink");
+            canvas.add(rect);
+            var rad = canvas.getHeight()/6;
+            var circle1 = new Circle(canvas.getWidth()/2,canvas.getHeight()-rad,rad);
+            circle1.setColor("grey");
+            canvas.add(circle1);
+            var rad2 = 2*canvas.getHeight()/18;
+            var circle2 = new Circle (canvas.getWidth()/2, 7*canvas.getHeight()/12, rad2);
+            circle2.setColor("grey");
+            canvas.add(circle2);
+            var rad3 = 4*canvas.getHeight()/54;
+            var circle3 = new Circle (canvas.getWidth()/2, 5*canvas.getHeight()/12, rad3);
+            circle3.setColor("grey");
+            canvas.add(circle3);
+            canvas.draw();  
+          }
+ 
+    }
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>    
+  </body>
+</html>
