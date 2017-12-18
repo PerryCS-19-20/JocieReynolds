@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Variables and Math</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>What I learned today was how to make functions and then call those functions. There is a difference in creating a function and calling it. Once the function is created you have to call the function in order for the computer to run the function that you just created. 
+        Parameter are extra information in a function. You add these parameter in the (). Here you list the names of different variables. You can give parameters all you have to do is add commas between them. When the function is complete it can return the value. To do this you 
+        need to use the return keyword and the value you want to return. </em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        Hello World <!-- Program title -->
+      </div>
+
+<script class="code">
+
+   function start(){
+        var miles = readInt("What is a distance in miles?");
+        var kilometers = miles * 1.60934;
+        var meters = kilometers * 1000;
+        var feet = meters * 3.28084;
+        var inches = feet * 12;
+        var millimeters = inches * 25.4;
+        println("Distance in miles: " + miles);
+        print("Distance in kilometers: ");
+        println(milesToKilometers(miles));
+        print("Distance in meters: ");
+        println(kilometersToMeters(kilometers));
+        print("Distance in feet: ");
+        println(metersToFeet(meters));
+        print("Distance in inches: ");
+        println(feetToInches(feet));
+        print("Distance in milimeters: ");
+        println(inchesToMillimeters(inches));
+   
+      }
+        function milesToKilometers(miles){
+            var kilometers = miles * 1.60934;
+            return kilometers;
+       }
+        function kilometersToMeters(kilometers){
+            var meters = kilometers * 1000;
+            return meters;
+        }
+        function metersToFeet(meters){
+            var feet = meters * 3.28084;
+            return feet;
+            }
+            function feetToInches(feet){
+            var inches = feet * 12;
+            return inches;
+            }
+            function inchesToMillimeters(inches){
+            var millimeters = inches * 25.4;
+            return millimeters;
+           }
+
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    
+  </body>
+</html>
